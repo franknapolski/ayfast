@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Ay Fast Discography</title>
+
+
+<!--     // <script type='text/javascript' src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    // <script type='text/javascript' src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    // <script type='text/javascript' src="moment.js"></script> -->
+    <link href="assets/stylesheets/css/style.css" rel="stylesheet">
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"> -->
+
+<script type='text/javascript'>//<![CDATA[
+
+// jQuery(function($){
+//     $(window).load(function(){
+//         // find template and compile it
+//         var templateSource = document.getElementById('results-template').innerHTML,
+//             template = Handlebars.compile(templateSource),
+//             resultsPlaceholder = document.getElementById('results'),
+//             playingCssClass = 'playing',
+//             audioObject = null;
+
+//         Handlebars.registerHelper("calcDur", function(dur) {
+//             dur = dur / 1000;
+//             var mn = Math.floor( dur / 60);
+//             var sc = Math.round( (dur - mn*60) );
+//             if (sc < 10) {
+//                 var calcDur = mn + ":0" + sc;
+//             }
+//             else {
+//                 var calcDur = mn + ":" + sc;
+//             }
+//             return calcDur;
+//         });
+
+//         Handlebars.registerHelper('dateFormat', function(context, block) {
+//           if (window.moment) {
+//             var f = block.hash.format || "MMM Do, YYYY";
+//             return moment(context).format(f);
+//           }else{
+//             return context;   //  moment plugin not available. return data as is.
+//           };
+//         });
+//         var fetchTrackSample = function (trackId, callback) {
+//             $.ajax({
+//                 url: 'https://api.spotify.com/v1/tracks/' + trackId,
+//                 success: function (response) {
+//                     callback(response.preview_url);
+//                 }
+//             });
+//         };
+
+//         var getTrackList = function (albumId) {
+//             $.ajax({
+//                 url: 'https://api.spotify.com/v1/albums/' + albumId,
+//                 success: function (response) {
+//                     // console.dir(response);
+//                     $("div."+albumId).html(template(response));
+//                     // resultsPlaceholder.innerHTML = template(response);
+
+//                 }
+//             });
+//         };
+
+//         var getAlbums = function (query) {
+//             $.ajax({
+//                 url: 'https://api.spotify.com/v1/artists/'+query+'/albums',
+//                 data: {
+//                     album_type: 'album,single'
+//                 },
+//                 success: function (response) {
+
+//                     $.each(response.items, function(){
+//                         $("#results").append("<div class='album "+this.id+"'></div>");
+//                         console.log(this);
+//                         getTrackList(this.id);
+//                     });
+//                 }
+//             });
+//         };
+
+//         results.addEventListener('click', function(e) {
+//             var target = e.target;
+
+//             if (target !== null && ( target.classList.contains('track') || target.parentNode.classList.contains('track') ) ){
+//                 if (target.classList.contains(playingCssClass) || target.parentNode.classList.contains(playingCssClass)) {
+//                     audioObject.pause();
+//                 }
+//                 else {
+//                     if (audioObject) {
+//                         audioObject.pause();
+//                     }
+//                     if (target.parentNode.classList.contains('track')) {
+//                         target = target.parentNode;
+//                     }
+//                     fetchTrackSample(target.getAttribute('id'), function(data) {
+//                        audioObject = new Audio(data);
+//                        audioObject.play();
+//                        target.classList.add(playingCssClass);
+//                        target.firstElementChild.classList.add('fa-volume-up');
+//                        audioObject.addEventListener('ended', function() {
+//                             target.classList.remove(playingCssClass);
+//                             target.firstElementChild.classList.remove('fa-volume-up');
+//                         });
+//                         audioObject.addEventListener('pause', function() {
+//                             target.classList.remove(playingCssClass);
+//                             target.firstElementChild.classList.remove('fa-volume-up');
+//                        });
+//                     });
+//                 }
+//             }
+//         });
+//         getAlbums('3FWRpB2S3mTCnKBhlTF9hW');
+
+//     });
+
+// });
+
+//]]>
+</script>
+</head>
+<body>
+<h1>AY FAST</h1>
+    <div id="results" class="container"> </div>
+
+    <script type="text/javascript" src="assets/js/main.min.js"></script>
+
+    <script id="results-template" type="text/x-handlebars-template">
+        <div class="container col-lg-10 col-lg-offset-1">
+            <div data-album-id="{{id}}" class="cover col-sm-6">
+                <img src="{{images.0.url}}" title="{{name}}" alt="{{name}}" class="img-responsive" />
+            </div>
+            <div class="col-sm-6">
+                <h3>{{name}} <span class="small">({{ dateFormat release_date format="YYYY" }})</span></h3>
+                <ol class="tracklist">
+                {{#each tracks.items}}
+                    <li>
+                     <a id="{{id}}" class="track">
+                            <i class="fa"><span class="num">{{track_number}}</span></i><span class="name">{{name}}</span><span class="duration">{{calcDur duration_ms}}</span>
+                      </a>
+                    </li>
+                {{/each}}
+
+                </ol>
+
+                <div class="spotify-button">
+                 <a href="{{external_urls.spotify}}" class="btn btn-primary" target="_blank">
+
+
+                        <i class="fa fa-spotify fa-2x"> </i>
+                        <span>Play full album on Spotify</span>
+
+
+                      </a>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script src="http://localhost:35729/livereload.js"></script>
+</body>
+</html>
+
+

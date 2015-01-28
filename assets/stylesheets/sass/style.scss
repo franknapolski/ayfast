@@ -1,0 +1,67 @@
+@import "bootstrap.scss";
+@import "font-awesome.scss";
+
+section.container {
+
+}
+.parallax-container {
+	width: 100%;
+ min-height: 600px;
+ background: transparent;
+}
+.parallax-mirror {
+		z-index: 0 !important;
+}
+
+.album {
+
+}
+.album .small {
+	float: right;
+}
+.cover {
+
+}
+.spotify-button span {
+	display: inline-block;
+	position: relative;
+	bottom: 5px;
+}
+.spotify-button .fa {
+	width: auto;
+	display: inline;
+}
+.tracklist {
+	margin: 0 0 1em 0;
+	padding:0;
+	list-style: none;
+}
+.track {
+ border-bottom: 1px solid #ccc;
+ transition: background 0.3s ease;
+ cursor: pointer;
+ width: 100%;
+ padding: 0.5em;
+ display: block;
+ text-decoration: none;
+}
+.track:hover {
+	background: rgba(50,50,50,.1);
+}
+.track.playing {
+	background: #337ab7;
+	color: #fff;
+}
+.track .num {
+ display: inline-block;
+ text-align: left;
+}
+.duration {
+ float: right;
+}
+.tracklist .fa  {
+ width: 1.7em;
+}
+.playing .num {
+ display: none;
+}

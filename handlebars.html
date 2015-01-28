@@ -1,0 +1,28 @@
+
+
+<script id="results-template" type="text/x-handlebars-template">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div data-album-id="{{id}}" class="cover col-sm-6">
+			    <img src="{{images.0.url}}" title="{{name}}" alt="{{name}}" class="img-responsive" />
+			</div>
+			<div class="col-sm-6">
+	   <h3>{{name}} <span class="small">({{ dateFormat release_date format="YYYY" }})</span></h3>
+	   <ol class="tracklist">
+	   {{#each tracks.items}}
+	       <li>
+	        <a id="{{id}}" class="track">
+	               <i class="fa"><span class="num">{{track_number}}</span></i><span class="name">{{name}}</span><span class="duration">{{calcDur duration_ms}}</span>
+	         </a>
+	       </li>
+	   {{/each}}
+	   </ol>
+
+	   <div class="spotify-button">
+	    <a href="{{external_urls.spotify}}" class="btn btn-primary" target="_blank">
+	           <i class="fa fa-spotify fa-2x"> </i>
+	           <span>Play full album on Spotify</span>
+	    </a>
+	   </div>
+			</div>
+		</div>
+ </script>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+		<!-- Bootstrap CSS -->
+		<link href="assets/stylesheets/css/style.css" rel="stylesheet">
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body id="page-top">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	                <span class="sr-only">Toggle navigation</span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand page-scroll" href="#page-top">Superbowl XXX420</a>
+	        </div>
+
+	        <!-- Collect the nav links, forms, and other content for toggling -->
+	        <div class="collapse navbar-collapse navbar-right">
+	            <ul class="nav navbar-nav">
+	                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+	                <li class="hidden">
+	                    <a class="page-scroll" href="#page-top"></a>
+	                </li>
+	                <li>
+	                    <a class="page-scroll" href="#contact">Contact</a>
+	                </li>
+
+	            </ul>
+	        </div>
+	        <!-- /.navbar-collapse -->
+	    </div>
+	    <!-- /.container -->
+ </nav>
+  <div class="parallax-container" data-parallax="scroll" data-bleed="0" data-image-src="./img/bg-home.jpg" data-natural-width="1280" data-speed="0.2" data-position="-100 -100px"></div>
+
+		<div class="jumbotron">
+			<div class="container">
+				<h1>Superbowl XXX420</h1>
+				<p>Contents ...</p>
+				<p>
+					<a class="btn btn-primary btn-lg">Learn more</a>
+				</p>
+			</div>
+		</div>
+
+		<section class="container">
+			<div class="row">
+				<div class="col-xs-6">
+								<h1>Hello World</h1>
+								<h2>Test</h2>
+								<p>ASIjwqe</p>
+								<p>sdasdas</p>
+								<p>sadasd</p>
+								<p>sdaaa</p>
+								<p>aooooo2o</p>
+								<p>ffofoofoo</p>
+				</div>
+								<div class="col-xs-6">
+								<h1>Hello World</h1>
+								<h2>Test</h2>
+								<p>ASIjwqe</p>
+								<p>sdasdas</p>
+								<p>sadasd</p>
+								<p>sdaaa</p>
+								<p>aooooo2o</p>
+								<p>ffofoofoo</p>
+				</div>
+			</div>
+		</section>
+
+  <div class="parallax-container" data-parallax="scroll" data-bleed="0" data-image-src="./img/bg-about.jpg" data-natural-width="1280" data-speed="0.2"></div>
+
+
+		<section class="container">
+			<div class="row">
+				<div class="col-xs-6">
+								<h1>Hello World</h1>
+								<h2>Test</h2>
+								<p>ASIjwqe</p>
+								<p>sdasdas</p>
+								<p>sadasd</p>
+								<p>sdaaa</p>
+								<p>aooooo2o</p>
+								<p>ffofoofoo</p>
+				</div>
+								<div class="col-xs-6">
+								<h1>Hello World</h1>
+								<h2>Test</h2>
+								<p>ASIjwqe</p>
+								<p>sdasdas</p>
+								<p>sadasd</p>
+								<p>sdaaa</p>
+								<p>aooooo2o</p>
+								<p>ffofoofoo</p>
+				</div>
+			</div>
+		</section>
+
+  <div class="parallax-container" data-parallax="scroll" data-bleed="0" data-image-src="./img/bg-fill1.jpg" data-natural-width="1280" data-speed="0.2"></div>
+<div class="parallax-container" data-parallax="scroll" data-bleed="0" data-image-src="./img/bg-fill2.jpg" data-natural-width="1280" data-speed="0.2"></div>
+
+		<section class="container">
+			<div class="row">
+				<div class="col-lg-12">
+								<h1>Hello World</h1>
+								<h2>Test</h2>
+								<p>ASIjwqe</p>
+								<p>sdasdas</p>
+								<p>sadasd</p>
+								<p>sdaaa</p>
+								<p>aooooo2o</p>
+								<p>ffofoofoo</p>
+				</div>
+			</div>
+		</section>
+
+		<section class="container">
+			<div id="results" class="row"></div>
+		</section>
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="assets/js/main.min.js"></script>
+ <script src="http://localhost:35729/livereload.js"></script>
+
+ <script id="results-template" type="text/x-handlebars-template">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div data-album-id="{{id}}" class="cover col-xs-6">
+			    <img src="{{images.0.url}}" title="{{name}}" alt="{{name}}" class="img-responsive" />
+			</div>
+			<div class="col-xs-6">
+	   <h3>{{name}} <span class="small">({{ dateFormat release_date format="YYYY" }})</span></h3>
+	   <ol class="tracklist">
+	   {{#each tracks.items}}
+	       <li>
+	        <a id="{{id}}" class="track">
+	               <i class="fa"><span class="num">{{track_number}}</span></i><span class="name">{{name}}</span><span class="duration">{{calcDur duration_ms}}</span>
+	         </a>
+	       </li>
+	   {{/each}}
+	   </ol>
+
+	   <div class="spotify-button">
+	    <a href="{{external_urls.spotify}}" class="btn btn-primary" target="_blank">
+	           <i class="fa fa-spotify fa-2x"> </i>
+	           <span>Play full album on Spotify</span>
+	    </a>
+	   </div>
+			</div>
+		</div>
+ </script>
+	</body>
+</html>
